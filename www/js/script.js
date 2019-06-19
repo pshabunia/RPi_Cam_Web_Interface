@@ -2,12 +2,14 @@
 // Interface
 //
 function pointer_position(e) {
-    var x = e.clientX
-    var y = e.clientY
-    var xmlHttp = new XMLHttpRequest();
-    var async = true
-    xmlHttp.open("GET", "http:localhost:8000/position?x=" + x + "&y=" + y, async);
-    xmlHttp.send(null);
+  var we = window.event;
+  var x = we.pageX - we.currentTarget.offsetLeft;
+  var y = we.pageY - we.currentTarget.offsetTop;
+  var xmlHttp = new XMLHttpRequest();
+  var async = true
+  xmlHttp.onreadystatechange = function() {}
+  xmlHttp.open("GET", "http://raspberrypi.local:1337/position?x=" + x + "&y=" + y, async);
+  xmlHttp.send(null);
 }
 
 function toggle_fullscreen(e) {
