@@ -7,4 +7,13 @@ The wiki page can be found here:
 http://elinux.org/RPi-Cam-Web-Interface
 
 This includes the installation instructions at the top and full technical details.
-  
+
+# HACK HACK HACK
+
+Modifications on top of original build:
+
+* Use `min.php` as entry point, with minor modifications
+  * run in fullscreen mode at all times
+  * post mouse click events to a web server
+
+To access base functionality provided by `index.php`, visit `/admin.php`.
