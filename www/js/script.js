@@ -2,7 +2,12 @@
 // Interface
 //
 function pointer_position(e) {
-  
+    var x = e.clientX
+    var y = e.clientY
+    var xmlHttp = new XMLHttpRequest();
+    var async = true
+    xmlHttp.open("GET", "http:localhost:8000/position?x=" + x + "&y=" + y, async);
+    xmlHttp.send(null);
 }
 
 function toggle_fullscreen(e) {
