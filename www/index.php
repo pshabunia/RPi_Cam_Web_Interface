@@ -1,3 +1,10 @@
+<?php 
+      function getDimension() {
+        global $config;
+        return 'style="width:' . $config['width'] . 'px;height:' . $config['height'] . 'px;"';
+     }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +14,7 @@
   </head>
   <body onload="setTimeout('init(0,25,1);', 100);">
     <center>
-      <div><img id="mjpeg_dest" class="fullscreen" onclick="pointer_position(this);" /></div>
+      <div><img id="mjpeg_dest" <?php echo getDimension();?>  onclick="pointer_position(this);" /></div>
     </center>
  </body>
 </html>
