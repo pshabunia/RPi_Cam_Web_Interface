@@ -1,6 +1,10 @@
 //
 // Interface
 //
+function pointer_position(e) {
+  
+}
+
 function toggle_fullscreen(e) {
 
   var background = document.getElementById("background");
@@ -19,7 +23,6 @@ function toggle_fullscreen(e) {
     e.className = "fullscreen";
     background.style.display = "block";
   }
-
 }
 
 function set_display(value) {
