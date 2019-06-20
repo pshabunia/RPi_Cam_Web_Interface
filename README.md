@@ -12,8 +12,7 @@ This includes the installation instructions at the top and full technical detail
 
 Modifications on top of original build:
 
-* Use `min.php` as entry point, with minor modifications
-  * set video frame dimensions to actual size
-  * post mouse click events to a web server
-
-To access base web server functionality, visit `/admin.php`.
+* entry point changed to `min.php` with minor modifications
+  * set video frame size to fixed 720p
+  * relay mouse click events to a web service controlling a laser pointer
+* to access full web server functionality provided by original entry point, visit `/admin.php`
